@@ -1,0 +1,17 @@
+<div class="register-form">
+  <img src="./assets/logo.png" width="270" />
+  <h4>Register for New Account</h4>
+  <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)" novalidate>
+    <div class="form-group">
+      <input class="form-control" name="username" ngModel #username="ngModel" placeholder="Domain (e.g. mycompany.com)"/>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="password" ngModel #password="ngModel" type="password"  placeholder="Password"/>
+    </div>
+    <div class="form-group">
+      <input class="form-control" name="password-again" type="password"  placeholder="Password Again"/>
+    </div>
+    <button class="btn btn-default" routerLink="/sign-in" routerLinkActive="active">Cancel</button>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>
