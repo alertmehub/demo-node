@@ -1,6 +1,4 @@
 node_modules
-!node_modules/data-layer
-node_modules/data-layer/node_modules
 npm-debug.log
 Dockerfile*
 docker-compose*
