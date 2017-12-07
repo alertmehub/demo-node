@@ -17,7 +17,7 @@ export const appRoutes: Routes = [
     children: [
       { path: '', canActivateChild: [AuthGuard],
         children: [
-          { path: '', redirectTo: 'alertdefs', pathMatch: 'full' },
+          { path: '', redirectTo: 'alerts', pathMatch: 'full' },
           { path: 'alerts', component: AlertsComponent },
           { path: 'search', component: SearchComponent },
           { path: 'recall', component: RecallComponent },

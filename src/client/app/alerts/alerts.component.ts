@@ -9,8 +9,10 @@ const api = '/api';
   template: `
     <h1>Alerts</h1>
     <p>Sign up to be notified of important news and events.</p>
-    <np-preferences [token]="token" [clientId]="clientId" [externalParameters]="externalParameters"></np-preferences>
-  `,
+    <div style='background-color: white; padding: 10px'>
+      <np-preferences [token]="token" [clientId]="clientId" [externalParameters]="externalParameters"></np-preferences>
+    </div>
+    `,
   styles: []
 })
 export class AlertsComponent implements OnInit {
