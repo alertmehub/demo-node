@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-recall',
   template: `<h1>Current Recalls</h1>
   <p>Keep track of the current recall campaigns</p>
-    <img style='max-width:100%; ' src="/assets/recalls.png">
+    <img style='max-width:100%; ' src="/assets/recall.png">
   `,
   styles: []
 })
