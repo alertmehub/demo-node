@@ -7,15 +7,18 @@ const api = '/api';
 @Component({
   selector: 'app-alerts',
   template: `
-    <h1>Alerts</h1>
+    <h1>Alerts!!</h1>
     <p>Sign up to be notified of important news and events.</p>
     <div style='background-color: white; padding: 10px'>
-      <np-preferences [token]="token" [clientId]="clientId" [externalParameters]="externalParameters"></np-preferences>
+      <np-preferences [serviceUrl]="serviceUrl"
+        [token]="token" [clientId]="clientId"
+        [externalParameters]="externalParameters"></np-preferences>
     </div>
     `,
   styles: []
 })
 export class AlertsComponent implements OnInit {
+  serviceUrl = 'http://component.alertmehub.com/api';
   token: string;
   clientId = 'toyita.com';
   externalParameters: object = {};

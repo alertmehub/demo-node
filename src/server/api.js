@@ -13,10 +13,14 @@ async function getToken(req, res){
     // For this demo - we'll assume the token is valid and hard code the userid
     const userId = '111111111';
 
-    // Retrieve Data
-    const npTokenUrl = "http://np-service.azurewebsites.net/api/token/40ea0c05e0019d264230e0d69c292ddc9f46acc3e827f34012a24de4c3feca83/toyita.com/";
+    var alertmeClient = axios.create({
+      baseURL: 'http://api.alertmehub.com/api/',
+      timeout: 1000,
+      headers: {'Authorization': '3f27a22d980134dfc46cf8da5aa1d02ea08802d26804f0db604439281aff14c6'}
+    });
 
-    let npToken = await axios.get(npTokenUrl + userId );
+    // Retrieve Data
+    let npToken = await alertmeClient.get("token/toyita.com/" + userId );
 
     // Return
     res.status(200).json(npToken.data);

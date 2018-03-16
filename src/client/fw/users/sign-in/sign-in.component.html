@@ -3,7 +3,7 @@
   <img src="./assets/logo.png"  />
   <form #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)" novalidate>
     <div class="form-group">
-      <input class="form-control" name="username" required placeholder="domain" ngModel #username="ngModel" />
+      <input class="form-control" name="username" required placeholder="login" ngModel #username="ngModel" />
       <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
         Domain Name is required.
       </div>
@@ -23,7 +23,6 @@
       {{ formError }}
     </div>
     <div *ngIf="!submitting">
-      <a routerLink="/register">Register</a>
       <button type="submit" class="btn btn-primary">Sign In</button>
     </div>
     <div *ngIf="submitting">
