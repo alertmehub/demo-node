@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { NetprefsModule } from 'netprefs-component-angular';
+import { AlertmeModule } from 'alertme-component-angular';
 
 import { AppComponent } from './app.component';
 
@@ -37,7 +37,7 @@ import { CampaignsComponent } from './campaigns/campaigns.component';
     FwModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    NetprefsModule
+    AlertmeModule
   ],
   providers: [
     UserService,
