@@ -18,7 +18,7 @@ const api = '/api';
   styles: []
 })
 export class AlertsComponent implements OnInit {
-  serviceUrl = 'http://component.alertmehub.com/api';
+  serviceUrl = 'https://component.alertmehub.com/api';
   token: string;
   clientId = 'toyita.com';
   externalParameters: object = {};
