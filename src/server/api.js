@@ -10,17 +10,17 @@ async function getToken(req, res){
   try{
     // Authenticate
     // Check the token passed in, and lookup the user
-    // For this demo - we'll assume the token is valid and hard code the userid
-    const userId = '111111111';
+    // For this demo - we'll assume the user is valid and hard code the userid
+    const userId = 'bob';
 
     var alertmeClient = axios.create({
-      baseURL: 'http://api.alertmehub.com/api/',
+      baseURL: 'https://api.alertmehub.com/api/v1',
       timeout: 1000,
-      headers: {'Authorization': '3f27a22d980134dfc46cf8da5aa1d02ea08802d26804f0db604439281aff14c6'}
+      headers: {'Authorization': '57cb16692a9a96daa177432bfa95ba1527762b24e2c2fc7b5e78c316660763b5'}
     });
 
     // Retrieve Data
-    let npToken = await alertmeClient.get("token/toyita.com/" + userId );
+    let npToken = await alertmeClient.get("subscriber/token/" + userId );
 
     // Return
     res.status(200).json(npToken.data);

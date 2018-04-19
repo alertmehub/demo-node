@@ -10,17 +10,15 @@ const api = '/api';
     <h1>Alerts!!</h1>
     <p>Sign up to be notified of important news and events.</p>
     <div style='background-color: white; padding: 10px'>
-      <np-preferences [serviceUrl]="serviceUrl"
-        [token]="token" [clientId]="clientId"
-        [externalParameters]="externalParameters"></np-preferences>
+      <am-subscriber [token]="token" [publisherId]="publisherId"
+        [externalParameters]="externalParameters"></am-subscriber>
     </div>
     `,
   styles: []
 })
 export class AlertsComponent implements OnInit {
-  serviceUrl = 'https://component.alertmehub.com/api';
   token: string;
-  clientId = 'toyita.com';
+  publisherId = 'toyita.com';
   externalParameters: object = {};
 
   constructor(private userService: UserService, private http: HttpClient) { }
